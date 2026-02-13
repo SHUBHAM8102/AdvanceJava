@@ -1,234 +1,274 @@
-# Capgemini LPU Advance Java Practice Repository
 
-This repository is a **multi-module learning workspace** for Java topics covered during an advanced Java journey:
+# 📌 Capgemini LPU – Advanced Java Practice Repository
 
-- JDBC basics and CRUD operations
-- JPA/Hibernate ORM basics
-- Unit testing with JUnit 4 & JUnit 5 (including parameterized tests)
+Welcome to this **multi-module Java learning workspace**, created during the Advanced Java journey at **Capgemini LPU**.
 
-It currently contains multiple independent Maven projects created for practice and experimentation.
+This repository contains multiple independent Maven projects focused on mastering key concepts such as:
 
----
-
-## 📌 Repository Overview
-
-This repo includes these learning projects:
-
-1. `learnjdbc` – JDBC connection + CRUD with PostgreSQL (`student` table)
-2. `basicsOfJdbc` – Java utility methods + JUnit 5 test practice
-3. `Junit_Testing` – Parameterized tests (`@ValueSource`, `@CsvSource`, `@CsvFileSource`)
-4. `Hibernate_basics` – JPA/Hibernate CRUD using `Student` entity
-5. `basics_hibernate` – DAO-based Hibernate CRUD for `Product` entity
+* JDBC and CRUD operations
+* JPA/Hibernate ORM fundamentals
+* Unit Testing using JUnit 4 & JUnit 5
+* Parameterized Testing techniques
 
 ---
 
-## 🗂️ Current Folder Structure (As Present in Repo)
+# 🚀 Learning Modules Included
 
-```text
+This repo is organized into different practice projects:
+
+| Module Name          | Focus Area                                      |
+| -------------------- | ----------------------------------------------- |
+| **learnjdbc**        | JDBC basics + PostgreSQL CRUD                   |
+| **basicsOfJdbc**     | Core Java utilities + JUnit 5 testing           |
+| **Junit_Testing**    | Parameterized tests using multiple data sources |
+| **Hibernate_basics** | JPA/Hibernate CRUD with Student entity          |
+| **basics_hibernate** | DAO-based Hibernate CRUD with Product entity    |
+
+---
+
+# 🗂️ Current Repository Structure
+
+```
 capgemini_lpu_advance_java/
+│
 ├── learnjdbc/
-│   ├── src/main/java/com/connectdatabase/   # JDBC CRUD demo classes
-│   ├── pom.xml                              # PostgreSQL + JUnit Jupiter API
-│   ├── target/                              # Compiled build output (generated)
-│   └── .settings/.project/.classpath        # Eclipse metadata
+│   ├── src/main/java/com/connectdatabase/
+│   ├── pom.xml
+│   ├── target/
+│   └── Eclipse config files
+│
 ├── basicsOfJdbc/
-│   ├── src/main/java/com/prac/              # Calculator + Employee examples
-│   ├── src/test/java/com/prac/              # JUnit test class
-│   ├── pom.xml                              # JUnit Jupiter API dependency
-│   ├── target/                              # Compiled build output (generated)
-│   └── .settings/.project/.classpath        # Eclipse metadata
+│   ├── src/main/java/com/prac/
+│   ├── src/test/java/com/prac/
+│   ├── pom.xml
+│   ├── target/
+│   └── Eclipse config files
+│
 ├── Junit_Testing/
-│   ├── src/main/java/com/connectdatabase/   # Business logic for tests
-│   ├── src/test/java/com/learnjdbc/         # Parameterized test class
-│   ├── src/test/resources/                  # CSV test data
-│   ├── pom.xml                              # JUnit 4 + JUnit 5 params
-│   ├── target/                              # Compiled build output (generated)
-│   └── .settings/.project/.classpath        # Eclipse metadata
+│   ├── src/main/java/com/connectdatabase/
+│   ├── src/test/java/com/learnjdbc/
+│   ├── src/test/resources/
+│   ├── pom.xml
+│   ├── target/
+│   └── Eclipse config files
+│
 ├── Hibernate_basics/
-│   ├── src/main/java/com/practice/          # Student entity + CRUD demo classes
-│   ├── src/main/resources/META-INF/         # persistence.xml
-│   ├── pom.xml                              # Hibernate + PostgreSQL dependencies
-│   ├── target/                              # Compiled build output (generated)
-│   └── .settings/.project/.classpath        # Eclipse metadata
+│   ├── src/main/java/com/practice/
+│   ├── src/main/resources/META-INF/
+│   ├── pom.xml
+│   ├── target/
+│   └── Eclipse config files
+│
 ├── basics_hibernate/
-│   ├── src/main/java/com/product/           # Product entity + ProductDao + Main
-│   ├── src/main/resources/META-INF/         # persistence.xml
-│   ├── src/test/java/com/basics_hibernate/  # ProductDao test class
-│   ├── pom.xml                              # Hibernate + PostgreSQL + JUnit
-│   ├── target/                              # Compiled build output (generated)
-│   └── .settings/.project/.classpath        # Eclipse metadata
-└── .metadata/                               # Local Eclipse workspace metadata
+│   ├── src/main/java/com/product/
+│   ├── src/main/resources/META-INF/
+│   ├── src/test/java/com/basics_hibernate/
+│   ├── pom.xml
+│   ├── target/
+│   └── Eclipse config files
+│
+└── .metadata/
 ```
 
 ---
 
-## 📚 Detailed Explanation of Each Project
-
-### 1) `learnjdbc`
-Purpose: Understand low-level JDBC operations using PostgreSQL.
-
-Contains classes that demonstrate:
-- Driver loading and DB connection
-- Insert/update/delete using `Statement` / `PreparedStatement`
-- Fetching rows from `student` table
-- Fetching by user input (`id`)
-
-Typical flow in these classes:
-1. `Class.forName("org.postgresql.Driver")`
-2. `DriverManager.getConnection(...)`
-3. Execute SQL (`insert`, `update`, `delete`, `select`)
-4. Print result / close connection
-
-> Notes: DB credentials are currently hardcoded (`localhost:5432/school`, user `postgres`, password `root`).
+# 📚 Module-Wise Explanation
 
 ---
 
-### 2) `basicsOfJdbc`
-Purpose: Practice Java methods and unit testing concepts.
+## 1️⃣ learnjdbc – JDBC CRUD Practice
 
-Key files:
-- `Calculator.java` – add, reverse string, factorial, palindrome reverse, division
-- `Employee.java` – validation methods for age and department
-- `CalculatorTest.java` – tests for string reverse, factorial, palindrome, validation, exception handling
+### 🎯 Goal
 
-This project is useful for understanding **core Java + JUnit 5 assertions**.
+Learn low-level database interaction using **JDBC** with PostgreSQL.
 
----
+### Concepts Covered
 
-### 3) `Junit_Testing`
-Purpose: Learn parameterized testing patterns.
+* Driver loading
+* DB connection setup
+* Insert / Update / Delete operations
+* Fetching records from `student` table
+* Using `PreparedStatement`
 
-Key files:
-- `Program.java` – palindrome checker + add method
-- `EvenOrodd.java` – returns `even` or `odd`
-- `ProgrameTest.java` – demonstrates:
-  - `@ValueSource`
-  - `@CsvSource`
-  - `@CsvFileSource`
-- `capgemini.csv` – external test dataset for parity tests
+### Typical Workflow
 
-This module is focused on **data-driven testing**.
+```java
+Class.forName(...)
+DriverManager.getConnection(...)
+Execute SQL queries
+Close connection
+```
 
----
-
-### 4) `Hibernate_basics`
-Purpose: Learn JPA/Hibernate CRUD with an entity model.
-
-Key files:
-- `Student.java` – JPA entity mapped to `student_info`
-- `Demo.java` – insert
-- `Demo1.java` – fetch by primary key
-- `Demo2.java` – delete
-- `Demo3.java` – update
-- `Demo4.java` – JPQL query (has a query string typo currently)
-- `persistence.xml` – persistence unit `postgres` + DB configuration
-
-This module teaches **EntityManager lifecycle + transaction flow**.
+📌 Note: Credentials are currently hardcoded (`localhost:5432/school`).
 
 ---
 
-### 5) `basics_hibernate`
-Purpose: Practice Hibernate with DAO pattern.
+## 2️⃣ basicsOfJdbc – Core Java + Unit Testing
 
-Key files:
-- `Product.java` – entity mapped to `product`
-- `ProductDao.java` – insert/find/update/delete methods
-- `Main.java` – sample runner for DAO calls
-- `ProductDaoTest.java` – basic DAO test setup using JUnit
-- `persistence.xml` – DB + hibernate properties
+### 🎯 Goal
 
-This module introduces **separation of concerns** by moving DB logic to DAO.
+Practice Java utility methods along with **JUnit 5 testing**.
+
+### Key Classes
+
+* `Calculator.java`
+
+  * add, factorial, palindrome, reverse, division
+* `Employee.java`
+
+  * age validation, department checks
+* `CalculatorTest.java`
+
+  * assertion practice + exception handling
+
+This module strengthens **Java logic + testing skills**.
 
 ---
 
-## 🧭 Best Folder Structure (Recommended for GitHub)
+## 3️⃣ Junit_Testing – Parameterized Testing Module
 
-To make this repo cleaner and professional for GitHub, you can use the structure below:
+### 🎯 Goal
 
-```text
+Understand data-driven testing with JUnit.
+
+### Key Features
+
+* `@ValueSource`
+* `@CsvSource`
+* `@CsvFileSource`
+
+### Files Included
+
+* `Program.java` – palindrome + addition
+* `EvenOrodd.java` – even/odd checker
+* `capgemini.csv` – external test dataset
+
+Perfect module for mastering **Parameterized Tests**.
+
+---
+
+## 4️⃣ Hibernate_basics – JPA/Hibernate CRUD
+
+### 🎯 Goal
+
+Learn ORM basics using **EntityManager**.
+
+### Important Files
+
+* `Student.java` – Entity mapped to `student_info`
+* Demo classes:
+
+  * Insert
+  * Fetch
+  * Update
+  * Delete
+  * JPQL Query (typo exists currently)
+
+### Teaches
+
+* Persistence Unit setup
+* Transaction lifecycle
+* CRUD operations using JPA
+
+---
+
+## 5️⃣ basics_hibernate – Hibernate with DAO Pattern
+
+### 🎯 Goal
+
+Practice clean architecture using **DAO layer**.
+
+### Key Components
+
+* `Product.java` – mapped entity
+* `ProductDao.java` – CRUD methods
+* `Main.java` – runner class
+* `ProductDaoTest.java` – unit test setup
+
+This module introduces **separation of concerns**.
+
+---
+
+# ✅ Recommended GitHub Folder Structure (Professional)
+
+To make this repo cleaner for interviews and GitHub:
+
+```
 capgemini_lpu_advance_java/
+│
 ├── README.md
 ├── .gitignore
-├── pom.xml                         # parent aggregator POM (optional but recommended)
+├── pom.xml   (parent multi-module)
+│
 ├── docs/
-│   ├── setup.md                    # DB setup, prerequisites, run instructions
-│   └── architecture.md             # module-wise explanation
+│   ├── setup.md
+│   └── architecture.md
+│
 ├── modules/
 │   ├── jdbc-learn/
 │   ├── core-java-testing/
 │   ├── junit-parameterized/
 │   ├── hibernate-basics/
 │   └── hibernate-dao/
+│
 └── scripts/
     ├── init-db.sql
-    └── run-all-tests.sh
+    └── run-tests.sh
 ```
 
-### Why this structure is better
-- Keeps learning modules grouped under one `modules/` folder
-- Makes top-level repo clean and interview-ready
-- Separates **documentation**, **code**, and **scripts**
-- Easy to scale when adding Spring Boot, servlet, or microservice modules later
+### Why Better?
+
+✔ Organized modules
+✔ Clean top-level structure
+✔ Separate docs and scripts
+✔ Easy future expansion (Spring Boot etc.)
 
 ---
 
-## ✅ Suggested `.gitignore` (Important)
-
-Since this is a Java + Maven + Eclipse workspace, ignore generated and local IDE files:
+# ✅ Suggested `.gitignore`
 
 ```gitignore
-# Maven
+# Maven build
 **/target/
 
-# Eclipse
+# Eclipse files
 **/.classpath
 **/.project
 **/.settings/
 .metadata/
 
-# IntelliJ (if used later)
+# IntelliJ files
 .idea/
 *.iml
 
-# OS files
+# OS junk
 .DS_Store
 Thumbs.db
 ```
 
 ---
 
-## ⚙️ How to Run Any Module
+# ⚙️ Running Any Module
 
-Inside a module folder:
+Go inside a module folder and run:
 
 ```bash
 mvn clean test
 ```
 
-or to build without tests:
+Or build without tests:
 
 ```bash
 mvn clean package -DskipTests
 ```
 
-For JDBC/Hibernate modules, ensure:
-- PostgreSQL server is running
-- Database `school` exists
-- Required tables (`student`, `student_info`, `product`) are available
-- Credentials in code / `persistence.xml` are correct for your environment
-
 ---
 
-## 🚀 Future Improvements
+# 🛠 Requirements for JDBC/Hibernate Modules
 
-- Add a parent multi-module Maven `pom.xml`
-- Externalize DB credentials using properties/env vars
-- Add SQL schema scripts under `scripts/`
-- Improve test reliability (avoid depending on fixed DB records)
-- Rename inconsistent packages/classes for clean naming conventions
-- Fix JPQL typo in `Hibernate_basics` demo query
+Before running:
 
-If you'd like, I can also generate:
-1. a **ready-to-use parent `pom.xml`** for all modules,
-2. a **professional `.gitignore`** file,
-3. and a **`docs/setup.md` with SQL table creation scripts**.
+* PostgreSQL server must be running
+* Database `school` should exist
+* Required tables must be created
+* Credentials in code/persistence.xml must match your system
