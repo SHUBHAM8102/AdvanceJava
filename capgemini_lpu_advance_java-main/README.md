@@ -228,13 +228,6 @@ For JDBC/Hibernate modules, ensure:
 - Rename inconsistent packages/classes for clean naming conventions
 - Fix JPQL typo in `Hibernate_basics` demo query
 
----
-
-## 👨‍💻 Author
-
-**Arjit**  
-Advanced Java practice repository for Capgemini/LPU learning path.
-
 If you'd like, I can also generate:
 1. a **ready-to-use parent `pom.xml`** for all modules,
 2. a **professional `.gitignore`** file,
