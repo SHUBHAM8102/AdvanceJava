@@ -1,0 +1,20 @@
+#!/bin/sh
+# Maven Wrapper Script for Unix/Linux/Mac
+
+if [ -z "$JAVA_HOME" ]; then
+    JAVA_HOME=$(dirname $(readlink -f $(which java)))
+fi
+
+mvn_cmd="mvn"
+
+# Check if mvn wrapper jar exists
+WRAPPER_JAR="${0%/*}/.mvn/wrapper/maven-wrapper.jar"
+
+# For now, use system Maven if available
+if command -v mvn &> /dev/null; then
+    mvn "$@"
+else
+    echo "Maven not found. Please install Maven or set JAVA_HOME"
+    exit 1
+fi
+
