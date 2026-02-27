@@ -1,52 +1,216 @@
-# Comprehensive Documentation of Modules
+# 🚀 Advanced Java Practice Repository
 
-## Learn JDBC
-Description and key concepts related to JDBC.
+### Capgemini LPU – Backend Development Track
 
-## Basics of JDBC
-Introduction to JDBC components and architecture.
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Maven](https://img.shields.io/badge/Maven-Build-red)
+![JUnit5](https://img.shields.io/badge/JUnit-5-green)
+![Hibernate](https://img.shields.io/badge/Hibernate-ORM-blue)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-lightgrey)
+![Status](https://img.shields.io/badge/Project-Active-success)
 
-## JUnit Testing
-How to implement unit tests in Java using JUnit.
+---
 
-## Hibernate Basics
-Overview of Hibernate ORM and its configuration.
+## 📌 Overview
 
-## Basics Hibernate
-Basic operations and configuration for using Hibernate.
+This repository represents my **hands-on Advanced Java training** completed during the Capgemini LPU program.
 
-## CRM-SMS
-Detailed documentation about the Customer Relationship Management System for Small and Medium Enterprises.
+It contains multiple independent Maven-based modules focused on mastering:
 
-## FinTech Banking System
-Overview of the financial technology banking system.
+* Low-level database connectivity (JDBC)
+* ORM with JPA & Hibernate
+* Clean DAO architecture
+* Unit testing with JUnit 4 & 5
+* Parameterized testing techniques
+* Backend design best practices
 
-## HMS
-Documentation for Hospital Management System.
+This workspace demonstrates practical implementation of backend engineering fundamentals used in enterprise applications.
 
-## Online Food Delivery System
-A comprehensive guide on the online food ordering platform.
+---
 
-## Banking Loan Approval System
-Details regarding the loan approval process in banking.
+## 🛠 Tech Stack
 
-## Employee Management System
-Documentation on managing employee records.
+* **Java 17**
+* **Maven**
+* **PostgreSQL**
+* **JUnit 4 & JUnit 5**
+* **Mockito**
+* **JPA**
+* **Hibernate ORM**
+* **Eclipse IDE**
 
-## Product Category Management
-Managing different categories of products.
+---
 
-## Spring Projects
-Details about various projects leveraging the Spring framework.
+## 📂 Repository Structure
 
-## Caching
-Basics and implementation of caching in Java applications.
+```id="struct91"
+capgemini_lpu_advance_java/
+│
+├── learnjdbc/
+├── basicsOfJdbc/
+├── Junit_Testing/
+├── Hibernate_basics/
+├── basics_hibernate/
+└── .metadata/
+```
 
-## Relationship Mappings
-Understanding relationships in Hibernate and JPA.
+Each folder is a standalone Maven project.
 
-## Testing with Mockito
-How to use Mockito for testing in Java.
+---
 
-## Assignments
-List and description of assignments related to each module.
+# 📚 Modules & Learning Highlights
+
+---
+
+## 🔹 1. JDBC CRUD Implementation (`learnjdbc`)
+
+**Objective:**
+Understand low-level database interaction using JDBC.
+
+**Key Concepts:**
+
+* DriverManager
+* Connection handling
+* PreparedStatement
+* CRUD operations
+* ResultSet processing
+* Resource management
+
+**Skills Demonstrated:**
+
+* Manual SQL execution
+* Secure query handling
+* Database connectivity setup
+
+---
+
+## 🔹 2. Core Java + JUnit Testing (`basicsOfJdbc`)
+
+**Objective:**
+Strengthen Java logic building with unit testing.
+
+**Includes:**
+
+* Calculator utility methods
+* Employee validation logic
+* Exception handling
+* Assertion testing
+
+**Testing Features:**
+
+* JUnit 5
+* Assertion APIs
+* Edge case validation
+
+---
+
+## 🔹 3. Parameterized Testing (`Junit_Testing`)
+
+**Objective:**
+Implement data-driven testing strategies.
+
+**Annotations Used:**
+
+* `@ValueSource`
+* `@CsvSource`
+* `@CsvFileSource`
+
+**Highlights:**
+
+* External CSV-based testing
+* Multiple dataset validation
+* Clean test structure
+
+---
+
+## 🔹 4. Hibernate ORM with JPA (`Hibernate_basics`)
+
+**Objective:**
+Understand Object Relational Mapping fundamentals.
+
+**Concepts Covered:**
+
+* Entity mapping
+* Persistence unit configuration
+* Transaction lifecycle
+* JPQL queries
+* CRUD operations using EntityManager
+
+---
+
+## 🔹 5. DAO Architecture Implementation (`basics_hibernate`)
+
+**Objective:**
+Apply clean architecture principles.
+
+**Structure:**
+
+* Entity layer
+* DAO layer
+* Service-style execution
+* Unit testing DAO operations
+
+**Professional Concepts:**
+
+* Separation of concerns
+* Maintainable structure
+* Scalable design pattern
+
+---
+
+# 🧪 How to Run
+
+Navigate inside any module:
+
+```bash
+mvn clean test
+```
+
+Build without tests:
+
+```bash
+mvn clean package -DskipTests
+```
+
+---
+
+# 🗄 Database Requirements
+
+For JDBC & Hibernate modules:
+
+* PostgreSQL installed and running
+* Database: `school`
+* Required tables created
+* Credentials updated in code or `persistence.xml`
+
+---
+
+# 🎯 What This Repository Demonstrates
+
+✔ Strong understanding of Java backend fundamentals
+✔ Hands-on database integration
+✔ ORM expertise using Hibernate
+✔ Clean architecture using DAO pattern
+✔ Professional unit testing practices
+✔ Modular project organization
+
+---
+
+# 💼 Why This Project Matters
+
+This repository reflects:
+
+* Real backend development training
+* Industry-aligned coding practices
+* Clean project structuring
+* Test-driven mindset
+* Production-oriented architecture thinking
+
+It represents practical preparation for backend developer roles.
+
+---
+
+# 👨‍💻 Author
+
+**Shubham Kumar**
+Advanced Java Trainee 
