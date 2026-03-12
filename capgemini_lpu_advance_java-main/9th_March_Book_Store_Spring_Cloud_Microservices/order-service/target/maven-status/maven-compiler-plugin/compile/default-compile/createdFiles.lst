@@ -1,0 +1,9 @@
+com\bookstore\orderservice\controller\OrderController.class
+com\bookstore\orderservice\dto\CreateOrderRequest.class
+com\bookstore\orderservice\dto\UpdateOrderStatusRequest.class
+com\bookstore\orderservice\model\Order.class
+com\bookstore\orderservice\repository\OrderRepository.class
+com\bookstore\orderservice\service\OrderService.class
+com\bookstore\orderservice\client\BookClient.class
+com\bookstore\orderservice\dto\BookDTO.class
+com\bookstore\orderservice\OrderServiceApplication.class
