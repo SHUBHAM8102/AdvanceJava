@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System - Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 1000px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header .status {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section h2::before {
+            content: "→";
+            margin-right: 10px;
+            color: #667eea;
+        }
+
+        .endpoint-list {
+            list-style: none;
+        }
+
+        .endpoint-item {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+
+        .endpoint-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .method {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+
+        .method.get { background: #10b981; color: white; }
+        .method.post { background: #3b82f6; color: white; }
+        .method.put { background: #f59e0b; color: white; }
+        .method.delete { background: #ef4444; color: white; }
+
+        .endpoint-url {
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+        }
+
+        .endpoint-url a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .endpoint-url a:hover {
+            text-decoration: underline;
+        }
+
+        .credentials {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .credentials h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+
+        .cred-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .cred-table th,
+        .cred-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ffc107;
+        }
+
+        .cred-table th {
+            background: #ffc107;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .test-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .test-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .quick-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #667eea;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Student Management System</h1>
+            <div class="status">✓ Application Running Successfully</div>
+            <p style="margin-top: 15px; color: #666;">
+                Spring Boot REST API with Security, Pagination, Caching & File Management
+            </p>
+        </div>
+
+        <div class="credentials">
+            <h3>🔐 Authentication Credentials</h3>
+            <table class="cred-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Role</th>
+                        <th>Permissions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>admin</strong></td>
+                        <td><strong>admin123</strong></td>
+                        <td><span class="badge">ADMIN</span></td>
+                        <td>Full CRUD + File Operations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>user</strong></td>
+                        <td><strong>user123</strong></td>
+                        <td><span class="badge">USER</span></td>
+                        <td>Read-only Access</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Public Endpoints (No Authentication)</h2>
+            <ul class="endpoint-list">
+                <li class="endpoint-item">
+                    <span class="method get">GET</span>
+                    <div class="endpoint-url">
+                        <a href="/actuator/health" target="_blank">/actuator/health</a>
+                        - Application health status
+                    </div>
+                </li>
+                <li class="endpoint-item">
+                    <span class="method get">GET</span>
+                    <div class="endpoint-url">
+                        <a href="/actuator/metrics" target="_blank">/actuator/metrics</a>
+                        - Application metrics
+                    </div>
+                </li>
+                <li class="endpoint-item">
+                    <span class="method get">GET</span>
+                    <div class="endpoint-url">
+                        <a href="/actuator/info" target="_blank">/actuator/info</a>
+                        - Application information
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Student API Endpoints (Authentication Required)</h2>
+            <ul class="endpoint-list">
+                <li class="endpoint-item">
+                    <span class="method get">GET</span>
+                    <div class="endpoint-url">
+                        <a href="/api/students">/api/students</a>
+                        - Get all students (paginated)
+                        <span class="badge">USER/ADMIN</span>
+                    </div>
+                </li>
+                <li class="endpoint-item">
+                    <span class="method get">GET</span>
+                    <div class="endpoint-url">
+                        /api/students/{id} - Get student by ID
+                        <span class="badge">USER/ADMIN</span>
+                    </div>
+                </li>
+                <li class="endpoint-item">
+                    <span class="method post">POST</span>
+                    <div class="endpoint-url">
+                        /api/students - Create new student
+                        <span class="badge">ADMIN</span>
+                    </div>
+                </li>
+                <li class="endpoint-item">
+                    <span class="method put">PUT</span>
+                    <div class="endpoint-url">
+                        /api/students/{id} - Update student
+                        <span class="badge">ADMIN</span>
+                    </div>
+                </li>
+                <li class="endpoint-item">
+                    <span class="method delete">DELETE</span>
+                    <div class="endpoint-url">
+                        /api/students/{id} - Delete student
+                        <span class="badge">ADMIN</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>File Operations (Authentication Required)</h2>
+            <ul class="endpoint-list">
+                <li class="endpoint-item">
+                    <span class="method post">POST</span>
+                    <div class="endpoint-url">
+                        /api/students/{id}/profile-image - Upload profile image
+                        <span class="badge">ADMIN</span>
+                    </div>
+                </li>
+                <li class="endpoint-item">
+                    <span class="method post">POST</span>
+                    <div class="endpoint-url">
+                        /api/students/{id}/assignment-file - Upload assignment file
+                        <span class="badge">ADMIN</span>
+                    </div>
+                </li>
+                <li class="endpoint-item">
+                    <span class="method get">GET</span>
+                    <div class="endpoint-url">
+                        /api/students/{id}/profile-image - Download profile image
+                        <span class="badge">USER/ADMIN</span>
+                    </div>
+                </li>
+                <li class="endpoint-item">
+                    <span class="method get">GET</span>
+                    <div class="endpoint-url">
+                        /api/students/{id}/assignment-file - Download assignment file
+                        <span class="badge">USER/ADMIN</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quick-links">
+            <a href="/actuator/health" class="test-btn" target="_blank">Test Health</a>
+            <a href="/api/students" class="test-btn" target="_blank">View Students</a>
+            <a href="/actuator/metrics" class="test-btn" target="_blank">View Metrics</a>
+        </div>
+
+        <div class="section">
+            <h2>Features Implemented</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px;">
+                <div style="background: white; padding: 10px; border-radius: 5px; text-align: center;">
+                    ✅ REST APIs
+                </div>
+                <div style="background: white; padding: 10px; border-radius: 5px; text-align: center;">
+                    ✅ Spring Security
+                </div>
+                <div style="background: white; padding: 10px; border-radius: 5px; text-align: center;">
+                    ✅ Spring Cache
+                </div>
+                <div style="background: white; padding: 10px; border-radius: 5px; text-align: center;">
+                    ✅ Pagination
+                </div>
+                <div style="background: white; padding: 10px; border-radius: 5px; text-align: center;">
+                    ✅ File Upload/Download
+                </div>
+                <div style="background: white; padding: 10px; border-radius: 5px; text-align: center;">
+                    ✅ Spring Actuator
+                </div>
+                <div style="background: white; padding: 10px; border-radius: 5px; text-align: center;">
+                    ✅ CORS Config
+                </div>
+                <div style="background: white; padding: 10px; border-radius: 5px; text-align: center;">
+                    ✅ Role-Based Auth
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Server Port:</strong> 8090 | <strong>Database:</strong> PostgreSQL (student_management_system)</p>
+            <p style="margin-top: 10px;">Spring Boot 3.2.0 | Java 21 | PostgreSQL 18</p>
+        </div>
+    </div>
+</body>
+</html>
+
